@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leandro Oliveira Araújo - Assessor Parlamentar | Câmara Legislativa DF</title>
+    <meta name="description" content="Página profissional de Leandro Oliveira Araújo, Assessor Parlamentar na Câmara Legislativa do Distrito Federal">
+    <style>
+        :root {
+            --color-primary: #2B7D3E;
+            --color-accent: #D4A540;
+            --color-dark: #1F2121;
+            --color-light: #F5F5F5;
+            --color-white: #FFFFFF;
+            --color-gray: #A7A9A9;
+            --radius-base: 8px;
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #2B7D3E 0%, #D4A540 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .header-section {
+            text-align: center;
+            color: var(--color-white);
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: var(--color-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo img {
+            width: 70%;
+            height: 70%;
+            object-fit: contain;
+        }
+
+        .institution-name {
+            font-size: 16px;
+            font-weight: 500;
+            opacity: 0.95;
+            margin-bottom: 10px;
+        }
+
+        .institution-subtitle {
+            font-size: 13px;
+            opacity: 0.85;
+        }
+
+        .card {
+            background: var(--color-white);
+            border-radius: var(--radius-base);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, #2B7D3E 0%, #D4A540 100%);
+            padding: 40px 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+        }
+
+        .card-photo {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 6px solid var(--color-white);
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-title {
+            color: var(--color-white);
+        }
+
+        .card-name {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+
+        .card-position {
+            font-size: 16px;
+            opacity: 0.95;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .card-organization {
+            font-size: 14px;
+            opacity: 0.90;
+        }
+
+        .card-body {
+            padding: 40px 24px;
+        }
+
+        .info-section {
+            margin-bottom: 32px;
+        }
+
+        .info-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--color-gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: '';
+            width: 4px;
+            height: 4px;
+            background: var(--color-accent);
+            border-radius: 50%;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            padding: 12px;
+            background: var(--color-light);
+            border-radius: 6px;
+            transition: all 0.3s;
+        }
+
+        .info-item:hover {
+            background: #EEE;
+            transform: translateX(4px);
+        }
+
+        .info-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-icon {
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-accent);
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .info-content {
+            flex: 1;
+        }
+
+        .info-label {
+            font-size: 11px;
+            color: var(--color-gray);
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+
+        .info-link {
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+            word-break: break-all;
+        }
+
+        .info-link:hover {
+            color: var(--color-accent);
+            text-decoration: underline;
+        }
+
+        .action-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            padding: 24px;
+            border-top: 1px solid #E8E8E8;
+            background: var(--color-light);
+        }
+
+        .btn {
+            padding: 14px 16px;
+            border: none;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: var(--color-primary);
+            color: var(--color-white);
+        }
+
+        .btn-primary:hover {
+            background: #1F5C32;
+            box-shadow: 0 4px 12px rgba(43, 125, 62, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: var(--color-white);
+            color: var(--color-primary);
+            border: 2px solid var(--color-primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--color-primary);
+            color: var(--color-white);
+            box-shadow: 0 4px 12px rgba(43, 125, 62, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 32px;
+            color: var(--color-white);
+            font-size: 12px;
+            opacity: 0.8;
+        }
+
+        .share-section {
+            padding: 24px;
+            background: var(--color-light);
+            text-align: center;
+            border-top: 1px solid #E8E8E8;
+        }
+
+        .share-title {
+            font-size: 12px;
+            color: var(--color-gray);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .share-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .share-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transition: all 0.2s;
+            background: var(--color-white);
+            border: 2px solid var(--color-primary);
+            color: var(--color-primary);
+        }
+
+        .share-btn:hover {
+            background: var(--color-primary);
+            color: var(--color-white);
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 600px) {
+            .card-header {
+                padding: 30px 20px;
+            }
+
+            .card-name {
+                font-size: 24px;
+            }
+
+            .card-position {
+                font-size: 14px;
+            }
+
+            .card-photo {
+                width: 120px;
+                height: 120px;
+            }
+
+            .card-body {
+                padding: 30px 20px;
+            }
+
+            .action-buttons {
+                grid-template-columns: 1fr;
+            }
+
+            .header-section {
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-section">
+            <div class="logo">
+                <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/73d2ff6b-50b6-442e-93e9-92a3c39701f7" alt="Câmara Legislativa DF">
+            </div>
+            <div class="institution-name">Câmara Legislativa do Distrito Federal</div>
+            <div class="institution-subtitle">Assessoria Parlamentar</div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/11d661f2-3ff1-4927-b65b-aa27eef8d12e" alt="Leandro Oliveira Araújo" class="card-photo">
+                <div class="card-title">
+                    <div class="card-name">Leandro Oliveira Araújo</div>
+                    <div class="card-position">Assessor Parlamentar</div>
+                    <div class="card-organization">Câmara Legislativa do DF</div>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="info-section">
+                    <div class="section-title">Contato</div>
+                    <div class="info-item">
+                        <div class="info-icon">📱</div>
+                        <div class="info-content">
+                            <div class="info-label">Telefone</div>
+                            <a href="tel:+5561981150619" class="info-link">(61) 9 8115-0619</a>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">💼</div>
+                        <div class="info-content">
+                            <div class="info-label">E-mail Profissional</div>
+                            <a href="mailto:leandro.araujo@cl.df.gov.br" class="info-link">leandro.araujo@cl.df.gov.br</a>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">✉️</div>
+                        <div class="info-content">
+                            <div class="info-label">E-mail Pessoal</div>
+                            <a href="mailto:wordnael@gmail.com" class="info-link">wordnael@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <div class="section-title">Redes Sociais</div>
+                    <div class="info-item">
+                        <div class="info-icon">📸</div>
+                        <div class="info-content">
+                            <div class="info-label">Instagram</div>
+                            <a href="https://instagram.com/leandrooa" target="_blank" class="info-link">@leandrooa</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="share-section">
+                <div class="share-title">Compartilhe</div>
+                <div class="share-buttons">
+                    <button class="share-btn" onclick="shareWhatsApp()" title="Compartilhar no WhatsApp">💬</button>
+                    <button class="share-btn" onclick="shareEmail()" title="Enviar por E-mail">📧</button>
+                    <button class="share-btn" onclick="copyLink()" title="Copiar Link">🔗</button>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn btn-primary" onclick="downloadVCard()">
+                    💾 Salvar Contato
+                </button>
+                <button class="btn btn-secondary" onclick="copyToClipboard()">
+                    📋 Copiar Info
+                </button>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Assessoria Parlamentar | Câmara Legislativa do Distrito Federal</p>
+            <p>© 2025 - Todos os direitos reservados</p>
+        </div>
+    </div>
+
+    <script>
+        function downloadVCard() {
+            const vcard = `BEGIN:VCARD
+VERSION:3.0
+FN:Leandro Oliveira Araújo
+N:Araújo;Oliveira;Leandro;;;
+TITLE:Assessor Parlamentar
+ORG:Câmara Legislativa do DF
+TEL;TYPE=CELL;TYPE=VOICE;TYPE=pref:+5561981150619
+EMAIL;TYPE=WORK;TYPE=INTERNET:leandro.araujo@cl.df.gov.br
+EMAIL;TYPE=HOME;TYPE=INTERNET:wordnael@gmail.com
+X-SOCIALPROFILE;TYPE=instagram:https://instagram.com/leandrooa
+PHOTO;ENCODING=URI:https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/11d661f2-3ff1-4927-b65b-aa27eef8d12e
+END:VCARD`;
+
+            const element = document.createElement('a');
+            element.setAttribute('href', 'data:text/vcard;charset=utf-8,' + encodeURIComponent(vcard));
+            element.setAttribute('download', 'Leandro_Oliveira_Araujo.vcf');
+            element.style.display = 'none';
+            document.body.appendChild(element);
+            element.click();
+            document.body.removeChild(element);
+        }
+
+        function copyToClipboard() {
+            const text = `Leandro Oliveira Araújo
+Assessor Parlamentar
+Câmara Legislativa do DF
+📱 (61) 9 8115-0619
+💼 leandro.araujo@cl.df.gov.br
+✉️ wordnael@gmail.com
+📸 Instagram: @leandrooa`;
+
+            navigator.clipboard.writeText(text).then(() => {
+                const button = event.target;
+                const originalText = button.textContent;
+                button.textContent = '✅ Copiado!';
+                setTimeout(() => {
+                    button.textContent = originalText;
+                }, 2000);
+            });
+        }
+
+        function shareWhatsApp() {
+            const url = window.location.href;
+            const text = `Olá! Veja meu perfil profissional: ${url}`;
+            window.open(`https://wa.me/?text=${encodeURIComponent(text)}`);
+        }
+
+        function shareEmail() {
+            const url = window.location.href;
+            const subject = 'Perfil Profissional - Leandro Oliveira Araújo';
+            const body = `Conheça meu perfil profissional:\n\n${url}`;
+            window.location.href = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+
+        function copyLink() {
+            const url = window.location.href;
+            navigator.clipboard.writeText(url).then(() => {
+                const button = event.target;
+                const originalText = button.textContent;
+                button.textContent = '✅ Copiado!';
+                setTimeout(() => {
+                    button.textContent = originalText;
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
